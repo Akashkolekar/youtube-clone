@@ -1,0 +1,41 @@
+
+        <!-- <div class="items">
+            <div (click)="filter('')" class="item-link">
+                <i class="fas fa-photo-video"></i>
+                <span class="texts">Home</span>
+            </div>
+            <div (click)="filter('music')" class="item-link">
+                <i class="fas fa-music"></i>
+                <span class="texts" style="margin-left: 29px;">Music</span>
+            </div>
+            <div (click)="filter('movies')" class="item-link">
+                <i class="fas fa-video"></i>
+                <span class="texts" style="margin-left: 28px;">Movies</span>
+            </div>
+            <div (click)="filter('gaming')" class="item-link">
+                <i class="fas fa-gamepad"></i>
+                <span class="texts" style="margin-left: 26px;">Gaming</span>
+            </div>
+            <div (click)="filter('news')" class="item-link">
+                <i class="fas fa-newspaper"></i>
+                <span class="texts" style="margin-left: 29px;">News</span>
+            </div>
+        </div> -->
+
+        
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card" *ngFor="let i of filterCategory | pipe:search ">
+                <div>
+                    <a href={{i.link}}><img class="card-img-top" src={{i.image}} alt=""></a>
+                </div>
+
+                <div>
+                    <a class="link-text" href={{i.link}}><strong>{{i.name}}</strong></a>
+                </div>
+            </div>
+        </div>
+    </div>
+

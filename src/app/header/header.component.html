@@ -1,0 +1,56 @@
+<div class="header-main container-fluid">
+    <a><img class="img-expand" style="width: 55px; object-fit: contain; margin-top: -8px; " (click)="changeBar()"
+            src="assets/image.png" alt=""></a>
+    <i style="padding: 5px; margin-left: 10px;" class="header-icon fab fa-youtube">&nbsp;
+        <span style="color: black;  font-family: fantasy; font-size: 18px;">YouTube
+            <sup
+                style="font-weight: lighter; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 12px;">IN</sup>
+        </span></i>
+
+    <div class="input-search">
+        <i class="fa fa-search icon"></i>
+        <input type="text" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search">
+    </div>
+
+    <div class="img-icon">
+        <img class="icon-side" (click)="changeBarProfile()" src="assets/image-icon.jpeg" alt="">
+
+        <ul class="profile-edit" *ngIf="showProfile">
+
+            <li class="hover" style="list-style-type: none;">
+                <small class="">akash Kolekar</small><br>
+                <button (click)="openProfile()" class="button-size" routerLink="/profile">Full Profile</button>
+
+                <ul class="hover-inner">
+                    <li><img class="" style="margin-left: 0; width: 80px;" src="assets/image-icon.jpeg" alt=""></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+
+</div>
+
+<div *ngIf="show">
+    <div class="items">
+        <div class="item-link" routerLinkActive="active-link" routerLink="/home">
+            <i class="fas fa-photo-video"></i>
+            <span class="texts" style="margin-left: 25px;">Home</span>
+        </div>
+        <div class="item-link" routerLinkActive="active-link" routerLink="/music">
+            <i class="fas fa-music"></i>
+            <span class="texts" style="margin-left: 29px;">Music</span>
+        </div>
+        <div class="item-link" routerLinkActive="active-link" routerLink="/movies">
+            <i class="fas fa-video"></i>
+            <span class="texts" style="margin-left: 28px;">Movies</span>
+        </div>
+        <div class="item-link" routerLinkActive="active-link" routerLink="/gaming">
+            <i class="fas fa-gamepad"></i>
+            <span class="texts" style="margin-left: 26px;">Gaming</span>
+        </div>
+        <div class="item-link" routerLinkActive="active-link" routerLink="/news">
+            <i class="fas fa-newspaper"></i>
+            <span class="texts" style="margin-left: 29px;">News</span>
+        </div>
+    </div>

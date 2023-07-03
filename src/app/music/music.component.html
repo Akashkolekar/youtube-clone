@@ -1,0 +1,15 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="card" *ngFor="let i of array1 | pipe:search">
+            <div>
+                <a href={{i.link}}><img class="card-img-top" src={{i.image}} alt=""></a>
+            </div>
+
+            <div>
+                <a class="link-text" href={{i.link}}><strong>{{i.name}}</strong></a>
+            </div>
+        </div>
+    </div>
+</div>
+
